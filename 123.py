@@ -47,19 +47,28 @@ posts.append(post2)
 posts.append(post3)
 
 post4 = Post('livingston', 'architect', 'member2.name')
-post5 = Post('livingston','neon', 'member2.name')
-post6 = Post('benson boone','beautifil things', 'member2.name')
+post5 = Post('livingston', 'neon', 'member2.name')
+post6 = Post('benson boone', 'beautifil things', 'member2.name')
 posts.append(post4)
 posts.append(post5)
 posts.append(post6)
 
 post7 = Post('christopher', 'bad', 'member3.name')
-post8 = Post('bruno mars','when i was your man', 'member3.name')
-post9 = Post('charlie puth','dangerously', 'member3.name')
+post8 = Post('bruno mars', 'when i was your man', 'member3.name')
+post9 = Post('charlie puth', 'dangerously', 'member3.name')
 posts.append(post7)
 posts.append(post8)
 posts.append(post9)
 
 print(posts)
 
+for member in members:
+    print(member.name)
 
+for post in posts:
+    if post.author == member1.username:
+        print(post.title)
+
+for post in posts:
+    if post.content == "내용은내용":
+        print(post.title)
