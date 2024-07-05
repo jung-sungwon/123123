@@ -19,6 +19,12 @@ class Post():
         self.author = author
 
 
+def display_members():  # 함수 추가
+    print("--------------------------------------")
+    for member in members:
+        member.display()  # display 메소드 호출
+
+
 members = []
 
 member1 = Member("정성원", "ai7", "123123")
@@ -28,3 +34,5 @@ member3 = Member("종성원", "ai9", "312312")
 members.append(member1)
 members.append(member2)
 members.append(member3)
+
+display_members()
