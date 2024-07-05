@@ -8,6 +8,10 @@ class Member:
         self.username = username
         self.password = password
 
+    def display(self):
+        print(f"Name:{self.name}  ID:{self.username}")
+
+
 
 class Post():
     def __init__(self, title, content, author):
