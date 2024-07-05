@@ -1,6 +1,4 @@
 import hashlib
-print(1)
-
 
 class Member:
     def __init__(self, name, username, password):
@@ -23,7 +21,7 @@ class Post():
 def display_members():  # 함수 추가
     print("--------------------------------------")
     for member in members:
-        member.display()  # display 메소드 호출
+        member.display()  # display 메소드 호출1
 
 
 def create_post(posts):  # 함수 추가
