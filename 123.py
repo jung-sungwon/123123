@@ -36,3 +36,30 @@ members.append(member2)
 members.append(member3)
 
 display_members()
+
+posts = []
+
+post1 = Post('이무진', '신호등', 'member1.name')
+post2 = Post('다이나믹듀오', '고백', 'member1.name')
+post3 = Post('livingston', 'shadow', 'member1.name')
+posts.append(post1)
+posts.append(post2)
+posts.append(post3)
+
+post4 = Post('livingston', 'architect', 'member2.name')
+post5 = Post('livingston','neon', 'member2.name')
+post6 = Post('benson boone','beautifil things', 'member2.name')
+posts.append(post4)
+posts.append(post5)
+posts.append(post6)
+
+post7 = Post('christopher', 'bad', 'member3.name')
+post8 = Post('bruno mars','when i was your man', 'member3.name')
+post9 = Post('charlie puth','dangerously', 'member3.name')
+posts.append(post7)
+posts.append(post8)
+posts.append(post9)
+
+print(posts)
+
+
