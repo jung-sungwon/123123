@@ -1,5 +1,4 @@
 import hashlib
-print(1)
 
 
 class Member:
@@ -21,10 +20,10 @@ class Post():
         self.author = author
 
 
-def display_members():  # 함수 추가
+def display_members():  # 함수 추가치
     print("--------------------------------------")
     for member in members:
-        member.display()  # display 메소드 호출
+        member.display()  # display 메소드 호출1
 
 
 def create_post(posts):  # 함수 추가
@@ -32,7 +31,7 @@ def create_post(posts):  # 함수 추가
     print("---------------------------------------")
     print(f"특정유저 정성원님이 작성한 게시글의 제목 ")
     for post in posts:
-        if post.author == 'a17':  # 수정사항 : name이 아니라 username;
+        if post.author == 'a17':
             print(post.title)
 
     keyword = "특정단어"  # keyword 란 변수 선언
