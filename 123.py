@@ -1,5 +1,6 @@
 import hashlib
 
+
 class Member:
     def __init__(self, name, username, password):
         # 생성자 구현
@@ -18,7 +19,7 @@ class Post():
         self.author = author
 
 
-def display_members():  # 함수 추가
+def display_members():  # 함수 추가치
     print("--------------------------------------")
     for member in members:
         member.display()  # display 메소드 호출1
@@ -29,7 +30,7 @@ def create_post(posts):  # 함수 추가
     print("---------------------------------------")
     print("특정유저 '정성원'님이 작성한 게시글의 제목 ")
     for post in posts:
-        if post.author.name == '정성원':
+        if post.author == 'a17':
             print(post.title)
 
     keyword = "특정단어"  # keyword 란 변수 선언
@@ -65,7 +66,7 @@ def create_content():
     content = input("내용을 입력해주세요 :")
     username = input("작성자명을 입력해주세요 :")
 
-    new_content = Post(title, content, M1)
+    new_content = Post(title, content, username)
     posts.append(new_content)
 
 
@@ -88,23 +89,23 @@ print("기존 비밀번호:", M3.password)
 print("SHA-256 Hash :", hash3)
 
 
-post1 = Post('제목1', '단어', M1)
-post2 = Post('제목2', '단어', M2)
-post3 = Post('제목3', '특정단어', M3)
+post1 = Post('제목1', '단어', 'a17')
+post2 = Post('제목2', '단어', 'a18')
+post3 = Post('제목3', '특정단어', 'a19')
 posts.append(post1)
 posts.append(post2)
 posts.append(post3)
 
-post4 = Post('제목4', '단어', M1)
-post5 = Post('제목5', '단어', M2)
-post6 = Post('제목6', '특정 단어', M3)
+post4 = Post('제목4', '단어', 'a17')
+post5 = Post('제목5', '단어', 'a18')
+post6 = Post('제목6', '특정 단어', 'a19')
 posts.append(post4)
 posts.append(post5)
 posts.append(post6)
 
-post7 = Post('제목7', '단어', M1)
-post8 = Post('제목8', '단어', M2)
-post9 = Post('제목9', '특정 단어', M3)
+post7 = Post('제목7', '단어', 'a17')
+post8 = Post('제목8', '단어', 'a18')
+post9 = Post('제목9', '특정 단어', 'a19')
 posts.append(post7)
 posts.append(post8)
 posts.append(post9)
