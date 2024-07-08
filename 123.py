@@ -10,6 +10,7 @@ class Member:
         self.password = password
 
     def display(self):
+        # 메소드 구현
         print(f"Name:{self.name}  ID:{self.username}")
 
 
@@ -29,9 +30,9 @@ def display_members():  # 함수 추가
 def create_post(posts):  # 함수 추가
     # 특정유저가 작성한 게시글의 제목을 모두 프린트 / # 특정 단어가 content에 포함된 게시글의 제목을 모두 프린트
     print("---------------------------------------")
-    print("특정유저 '정성원'님이 작성한 게시글의 제목 ")
+    print(f"특정유저 정성원님이 작성한 게시글의 제목 ")
     for post in posts:
-        if post.author.name == '정성원':
+        if post.author == 'a17':  # 수정사항 : name이 아니라 username;
             print(post.title)
 
     keyword = "특정단어"  # keyword 란 변수 선언
@@ -55,9 +56,9 @@ def create_member():
 
     password_hash = hashlib.sha256(password.encode()).hexdigest()
 
-    new_member = Member(name, username, password)
+    new_member = Member(name, username, password_hash)  # 수정사항 : 해싱된 비밀번호 저장
     members.append(new_member)
-    print("회원 등록이 완료되었습니다. 비밀번호는 해싱처리되었습니다.")
+    print("회원 등록이 완료되었으며, 비밀번호는 해싱처리되었습니다.")
     print(f"해싱처리된 비밀번호 : {password_hash}")
 
 
@@ -67,13 +68,14 @@ def create_content():
     content = input("내용을 입력해주세요 :")
     username = input("작성자명을 입력해주세요 :")
 
-    new_content = Post(title, content, M1)
+    new_content = Post(title, content, username)
     posts.append(new_content)
 
 
 M1 = Member("정성원", "a17", "123123")
 M2 = Member("박윤성", "ai8", "231231")
 M3 = Member("조준호", "ai9", "312312")
+# 3개의 회원 인스턴스
 
 members.append(M1)
 members.append(M2)
@@ -90,23 +92,23 @@ print("기존 비밀번호:", M3.password)
 print("SHA-256 Hash :", hash3)
 
 
-post1 = Post('제목1', '단어', M1)
-post2 = Post('제목2', '단어', M2)
-post3 = Post('제목3', '특정단어', M3)
+post1 = Post('제목1', '단어', 'a17')
+post2 = Post('제목2', '단어', 'a18')
+post3 = Post('제목3', '특정단어', 'a19')
 posts.append(post1)
 posts.append(post2)
 posts.append(post3)
 
-post4 = Post('제목4', '단어', M1)
-post5 = Post('제목5', '단어', M2)
-post6 = Post('제목6', '특정 단어', M3)
+post4 = Post('제목4', '단어', 'a17')
+post5 = Post('제목5', '단어', 'a18')
+post6 = Post('제목6', '특정단어', 'a19')
 posts.append(post4)
 posts.append(post5)
 posts.append(post6)
 
-post7 = Post('제목7', '단어', M1)
-post8 = Post('제목8', '단어', M2)
-post9 = Post('제목9', '특정 단어', M3)
+post7 = Post('제목7', '단어', 'a17')
+post8 = Post('제목8', '단어', 'a18')
+post9 = Post('제목9', '특정단어', 'a19')
 posts.append(post7)
 posts.append(post8)
 posts.append(post9)
